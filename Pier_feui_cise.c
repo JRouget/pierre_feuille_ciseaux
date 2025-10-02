@@ -19,25 +19,25 @@ void repeat(int *joueur, int *ordi) {
         printf("Votre choix (1-3) : ");
         scanf("%d", joueur);
         *ordi = rand() % 3 + 1;
-    }
 
-    printf("Votre choix : ");
-    choix_du_joueur(*joueur);
-    printf("\n");
+        printf("Votre choix : ");
+        choix_du_joueur(*joueur);
+        printf("\n");
 
-    printf("L'ordi a choisi : ");
-    choix_du_joueur(*ordi);
-    printf("\n");
+        printf("L'ordi a choisi : ");
+        choix_du_joueur(*ordi);
+        printf("\n");
 
-    if (*joueur == *ordi) {
+        if (*joueur == *ordi) {
         printf("Egalite\n");
-    } else if ((*joueur == 1 && *ordi == 3) ||
-               (*joueur == 2 && *ordi == 1) ||
+        } else if ((*joueur == 1 && *ordi == 3) ||
+                   (*joueur == 2 && *ordi == 1) ||
                (*joueur == 3 && *ordi == 2)) {
-        printf("Vous gagnez\n");
-    } else {
-        printf("L'ordinateur gagne\n");
-    }  
+            printf("Vous gagnez\n");
+        } else {
+            printf("L'ordinateur gagne\n");
+        }  
+    }
 }
 
 int main() {
